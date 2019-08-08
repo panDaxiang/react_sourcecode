@@ -508,11 +508,11 @@ function legacyCreateRootFromDOMContainer(
 
 /**
  *
- * @param parentComponent
- * @param children
- * @param container
- * @param forceHydrate
- * @param callback
+ * @param parentComponent {Object} 父组件
+ * @param children {Object} 组件
+ * @param container {Object} DOM
+ * @param forceHydrate {Boolean} 暂时不清楚
+ * @param callback {Function}
  * @returns {*}
  */
 function legacyRenderSubtreeIntoContainer(
@@ -645,6 +645,13 @@ const ReactDOM: Object = {
     );
   },
 
+  /**
+   * 创建dom
+   * @param element {Object} 组件
+   * @param container {Object} DOM
+   * @param callback {Function} 函数
+   * @returns {*}
+   */
   render(
     element: React$Element<any>,
     container: DOMContainer,
